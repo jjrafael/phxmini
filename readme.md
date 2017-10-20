@@ -17,7 +17,8 @@ Phoenix were created from scratch using ReactJS, Redux, Babel, Webpack, Redux-Sa
 1. Clone repository
 2. Make sure you have NPM (or Yarn) for package management
 3. Run ```npm install```
-4. Should be running on your localhost port: ```8080```
+4. Once packages has installed, run ```npm start``` (more details on this below)
+5. Should be running on your localhost port: ```8080```
 
 ### Running in development mode
 1. In terminal, run ```npm start```
