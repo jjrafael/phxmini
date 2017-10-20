@@ -1,0 +1,58 @@
+/*Animations*/
+
+//gradient-alert
+@-webkit-keyframes gradient-alert {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes gradient-alert {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes gradient-alert { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+@-webkit-keyframes cell-alert {
+    0%{background-color: $red}
+    30%{background-color: $red}
+    100%{background-color: $transparent}
+}
+@-moz-keyframes cell-alert {
+    0%{background-color: $red}
+    30%{background-color: $red}
+    100%{background-color: $transparent}
+}
+@keyframes cell-alert { 
+    0%{background-color: $red}
+    30%{background-color: $red}
+    100%{background-color: $transparent}
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in { 
+    0%{
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 1;
+    }
+}

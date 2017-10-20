@@ -1,0 +1,96 @@
+$ico-list: (
+  ('back',    '!'),
+  ('users',   '"'),
+  ('ticket',  '$'),
+  ('down',    '%'),
+  ('settings','&'),
+  ('refresh', '\''),
+  ('reprint', '('),
+  ('other',   ')'),
+  ('end',     '*'),
+  ('out',     '+'),
+  ('search',  ','),
+  ('betslip', '-'),
+  ('money',   '.'),
+  ('report',  '/'),
+  ('home',    '0'),
+  ('live',    '1'),
+  ('locator', '2'),
+  ('result',  '3'),
+  ('info',    '4'),
+  ('faq',     '5'),
+  ('register','6'),
+  ('contact', '7'),
+  ('virtual', '8'),
+  ('inplay',  '9'),
+
+  ('def',     '@'),
+  ('olym',    '@'),
+  ('foot',    'A'),
+  ('futs',    'A'),
+  ('bask',    'B'),
+  ('base',    'C'),
+  ('amfb',    'D'),
+  ('aurl',    'E'),
+  ('badm',    'F'),
+  ('bevo',    'G'),
+  ('boxi',    'H'),
+  ('cric',    'I'),
+  ('cycl',    'J'),
+  ('dart',    'K'),
+  ('fiel',    'L'),
+  ('golf',    'M'),
+  ('grey',    'N'),
+  ('hand',    'O'),
+  ('hors',    'P'),
+  ('iceh',    'Q'),
+  ('mosp',    'R'),
+  ('rugu',    'S'),
+  ('snoo',    'T'),
+  ('tenn',    'U'),
+  ('voll',    'V'),
+  ('wate',    'W'),
+  ('wint',    'X'),
+  ('floo',    'Y'),
+  ('poke',    'Z'),
+  ('tabl',    'a'),
+
+  ('basketball',  'B'),
+  ('football',    'A'),
+  ('horse-racing','P'),
+  ('dog-racing',  'N'),
+  ('tennis',      'U')
+);
+
+@font-face {
+    font-family: 'fontsports';
+    src: url('fonts/fontsports.woff2') format('woff2'),
+         url('fonts/fontsports.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*[class*="sports-ico-"]{
+  font-family: 'fontsports';
+  font-style: normal;
+  &:before{
+    content: '@';
+  }
+}
+
+.sports-ico {
+    display: inline-block;
+    font: normal normal normal 14px/1 fontsportss;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-transform: none;
+}
+
+@each $label, $content in $ico-list {
+    $LABEL:to-upper-case(#{$label});
+    .sports-ico-#{$label}:before,
+    .sports-ico-#{$LABEL}:before,
+    { content: $content; }
+}

@@ -1,0 +1,198 @@
+.event-path-tree-container {
+    padding: 5px;
+    position: relative;
+    .saving-sort {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        background: rgba(255,255,255,0.3);
+        z-index: 2;
+        padding: 30px 0;
+        box-sizing: border-box;
+    }
+    #app-event-creator & {
+        padding: 28px 0 0 5px;
+        height: 100%;
+        box-sizing: border-box;
+        .event-path-tree {
+            height: 100%;
+        }
+        .event-path-tree-utils-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 28px;
+            line-height: 28px;
+            background-color: $gray-lightest;
+            text-align: right;
+            padding: 0px 10px;
+            a {
+                margin: 0 5px;
+                display: block;
+                float: left;
+                &.disabled {
+                    color: $gray;
+                }
+                &.checked {
+                    color: $primary;
+                }
+            }
+        }
+        .event-path-tree-body {
+            height: 100%;
+            width: 100%;
+            box-sizing: border-box;
+            padding-right: 5px;
+            overflow: auto;
+            backface-visibility: hidden;
+        }
+        .sports-icon {
+            background: $greenery;
+            color: $white;
+            padding: 3px;
+            border-radius: 5px;
+        }
+        h4 {
+            font-weight: normal;
+            cursor: pointer;
+            &.none-selected {
+                font-weight: bold;
+                color: $primary;
+                .sports-icon {
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+    h4 {
+        margin: 5px 0;
+    }
+    a {
+        text-decoration: none;
+        color: $pathtree-txt-clr;
+        &:hover {
+            color: $primary;
+        }
+    }
+    .event-path-tree-item {
+        position: relative;
+    }
+    .expand-toggle ,.pathtree-count ,.event-path-desc-icon {
+        position: absolute;
+        top: 5px;
+    }
+    .expand-toggle {
+        width: 18px;
+        left: 0;
+        display: inline-block;
+        text-align: center;
+        min-height: 18px;
+    }
+    .event-path-desc-icon {
+        @include lbl-count($gray-lighter, $white);
+        width: 25px;
+        margin-right: 3px;
+        display: inline-block;
+        left: 18px;
+        border-radius: 0;
+        &.event-path {
+            background: $greenery;
+        }
+        &.event {
+            background: $primary;
+        }
+    }
+    .pathtree-desc {
+        display: block;
+        padding: 5px 35px 5px 22px;
+        line-height: 15px;
+        > * {
+            @include ellipsis();
+        }
+    }
+    .pathtree-count {
+        @include lbl-count($gray-light, $white);
+        right: 0;
+    }
+    .event-path-tree {
+        .event-path-tree ,.events {
+            padding-left: 10px;
+        }
+    }
+    .has-description-icon {
+        .pathtree-desc {
+            padding-left: 47px
+        }
+    }
+    .active {
+        .pathtree-desc {
+            font-weight: bold;
+            color: $primary;
+        }
+    }
+    .filtered-results {
+        .event-path-tree-item, .event {
+            &.search-matching {
+                & > a {
+                    color: $secondary-dark;
+                }
+            }
+            &.search-non-matching {
+                & > a {
+                    color: $black;
+                }
+            }
+        }
+    }
+    .err-block {
+        color: $white;
+        padding: 10px 0px;
+        text-align: center;
+    }
+}
+
+
+.sidenav {
+    p {
+        color: $black;
+        padding: 10px;
+        margin: 0px;
+    }
+    .sidenav-lvl-0 {
+        h4 {
+            margin: 0px;
+            padding: 10px;
+            color: $black;
+            font-weight: $fw-normal;
+            i {
+                padding-right: 10px;
+            }
+        }
+        &:hover h4 {
+            color: $primary;
+        }
+    }
+    .sidenav-lvl-1 {
+        padding: 0px 5px 5px 5px;
+        &:hover h4 {
+            color: $primary;
+        }
+        .sidenav-child:hover  {
+            color: $primary;
+        }
+    }
+    .sidenav-lvl-0, .sidenav-lvl-1 {
+        cursor: pointer;
+        @include transit();
+        .sidenav-child {
+            padding: 5px 5px 5px 15px;
+        }
+    }
+}
+
+.event-path-tree-empty {
+    padding: 5px 10px;
+}

@@ -1,0 +1,272 @@
+/*Genral Mixins*/
+@mixin nopads() {
+    padding: 0px;
+    margin: 0px;
+}
+
+@mixin wh($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+@mixin sq($value) {
+    width: $value;
+    height: $value;
+}
+
+@mixin circle($diameter) {
+    @include border-radius($diameter / 2);
+    width: $diameter;
+    height: $diameter;
+    text-align: center;
+    line-height: $diameter;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin center() {
+    display: block;
+    margin: 0 auto;
+}
+
+@mixin center-absolute($width) {
+    position: absolute;
+    left: $width;
+}
+
+@mixin absolute($w, $h) {
+	content: '';
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: $w;
+	height: $h;
+}
+
+@mixin ellipsis(){
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@mixin txtwrap(){
+	word-wrap: break-word;
+	white-space: normal;
+}
+
+@mixin saturate($value) {
+    filter: saturate($value);
+}
+
+@mixin brightness($value) {
+    filter: brightness($value);
+}
+
+@mixin transit() {
+    transition: all 0.3s ease;
+}
+
+@mixin dropshadow($horz, $vert) {   
+    box-shadow: $horz $vert 31px 2px $black75;
+}
+
+@mixin dropglow($color) {
+    box-shadow: 0px 20px 27px -17px $color;
+}
+
+@mixin ellipses($w) {
+    width: $w;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin pseudo-caret-right($w){
+	width: $w;
+	position: relative;
+	&:before {
+		content: '';
+		position: absolute;
+		@include sq($header-height);
+		right: 0px;
+		background-color: transparent;
+		border-top: 1px solid $white50;
+		border-right: 1px solid $white50;
+		transform: rotate(45deg);
+	}
+}
+
+@mixin pseudo-status-icon() {
+	content: '';
+	position: absolute;
+	top: 5px;
+	left: 5px;
+}
+
+@mixin outline-action($color1, $color2){
+	border: 1px solid $color1;
+	color: $color1;
+	background: none;
+	@include transit();
+	border-radius: $radius;
+	&:hover {
+		&:not(.disabled){
+			cursor: pointer;
+			background: $color1;
+			color: $color2!important;
+			a, i, span {
+				color: $color2!important;
+			}
+		}
+	}
+	a, i, span {
+		color: $color1;
+	}
+}
+
+@mixin btn() {
+	height: 24px;
+    border-radius: 3px;
+    border: 0px;
+    padding: 0px 20px;
+    background: $primary-lightest;
+    box-shadow: 0px 3px $primary-lighter;
+    color: $primary;
+    &:not(.disabled),
+    &:not([disabled]) {
+    	cursor: pointer;
+    	@include transit();
+    	&:hover {
+    		color: $white;
+    		background: $primary;
+    		box-shadow: 0px 3px $primary-darker;
+    	}
+    }
+    &.primary {
+    	background: $primary-light;
+    	box-shadow: 0px 3px $primary-darker;
+    	&:not(.disabled),
+    	&:not([disabled]) {
+	    	&:hover {
+	    		color: $primary-darker;
+	    		background: $primary-lightest;
+	    		box-shadow: 0px 3px $primary-darkest;
+	    	}
+	    }
+    }
+    &[disabled],
+    &.disabled {
+		cursor: not-allowed;
+		box-shadow: 0px 3px $gray-light;
+	    background: $gray-lighter;
+    	color: $gray;
+    	cursor: not-allowed;
+    	&:hover {
+    		box-shadow: 0px 3px $gray-light;
+		    background: $gray-lighter;
+	    	color: $gray;
+	    	cursor: not-allowed;
+    	}
+	}
+}
+
+@mixin lbl-count($color1, $color2){
+    width: 30px;
+    text-align: center;
+    box-sizing: border-box;
+    background: $color1;
+    border-radius: 10px;
+    color: $color2;
+    padding: 3px;
+    font-size: 12px;
+}
+
+@mixin box-outline($color1, $color2) {
+	border: 1px solid $color1;
+	color: $color1;
+	background: transparent;
+	cursor: pointer;
+	@include transit();
+	&:hover {
+		color: $color2;
+		background-color: $color1;
+	}
+}
+
+@mixin shadow-allsides(){
+    box-shadow: 0px 0px 50px $black50;
+}
+
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+
+/*filters and effects*/
+@mixin brightness($value) {
+	filter: brightness($value);
+}
+
+/*text*/
+@mixin h3() {
+	font-weight: $fw-normal;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: $primary;
+}
+
+/*font icons*/
+@mixin fonticon() {
+	font-family: 'phxicons' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/*gradients*/
+@mixin grd-horz($color){
+	background: $color;
+	background: -moz-linear-gradient(left, $color 0%, $color 26%, $transparent 55%, $transparent 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, $color), color-stop(26%, $color), color-stop(55%, $transparent), color-stop(100%, $transparent));
+	background: -webkit-linear-gradient(left, $color 0%, $color 26%, $transparent 55%, $transparent 100%);
+	background: -o-linear-gradient(left, $color 0%, $color 26%, $transparent 55%, $transparent 100%);
+	background: -ms-linear-gradient(left, $color 0%, $color 26%, $transparent 55%, $transparent 100%);
+	background: linear-gradient(to right, $color 0%, $color 26%, $transparent 55%, $transparent 100%);
+}
+
+/*Animation*/
+@mixin cell-alert {
+	&:before {
+        @include absolute(100%, 100%);
+  		-webkit-animation: cell-alert 3s ease;
+		-moz-animation: cell-alert 3s ease;
+		animation: cell-alert 3s ease;
+		animation-iteration-count: 1;
+    }
+    color: $black;
+}
+@mixin gradient-alert(){
+	background: linear-gradient(270deg, $xylo1, $xylo2, $xylo3);
+	background-size: 200% 200%;
+	color: $white;
+	@include transit();
+	-webkit-animation: gradient-alert 5s ease infinite;
+	-moz-animation: gradient-alert 5s ease infinite;
+	animation: gradient-alert 5s ease infinite;
+	a {
+		@include transit();
+		color: $white!important;
+	}
+}

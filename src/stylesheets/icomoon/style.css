@@ -1,0 +1,218 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?jixm0q');
+  src:  url('fonts/icomoon.eot?jixm0q#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?jixm0q') format('truetype'),
+    url('fonts/icomoon.woff?jixm0q') format('woff'),
+    url('fonts/icomoon.svg?jixm0q#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="phxIcon-"], [class*=" phxIcon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.phxIcon-broken_image:before {
+  content: "\e903";
+}
+.phxIcon-steps:before {
+  content: "\e900";
+}
+.phxIcon-user-tie:before {
+  content: "\e901";
+}
+.phxIcon-user:before {
+  content: "\e901";
+}
+.phxIcon-user-employee:before {
+  content: "\e901";
+}
+.phxIcon-profile:before {
+  content: "\e901";
+}
+.phxIcon-avatar:before {
+  content: "\e901";
+}
+.phxIcon-person:before {
+  content: "\e901";
+}
+.phxIcon-member:before {
+  content: "\e901";
+}
+.phxIcon-job:before {
+  content: "\e901";
+}
+.phxIcon-official:before {
+  content: "\e901";
+}
+.phxIcon-fire:before {
+  content: "\e902";
+}
+.phxIcon-flame:before {
+  content: "\e902";
+}
+.phxIcon-hot:before {
+  content: "\e902";
+}
+.phxIcon-popular:before {
+  content: "\e902";
+}
+.phxIcon-plus:before {
+  content: "\f067";
+}
+.phxIcon-minus:before {
+  content: "\f068";
+}
+.phxIcon-close:before {
+  content: "\f00d";
+}
+.phxIcon-remove:before {
+  content: "\f00d";
+}
+.phxIcon-times:before {
+  content: "\f00d";
+}
+.phxIcon-trash-o:before {
+  content: "\f014";
+}
+.phxIcon-repeat:before {
+  content: "\f01e";
+}
+.phxIcon-rotate-right:before {
+  content: "\f01e";
+}
+.phxIcon-lock:before {
+  content: "\f023";
+}
+.phxIcon-pencil:before {
+  content: "\f040";
+}
+.phxIcon-open:before {
+  content: "\f04b";
+}
+.phxIcon-suspended:before {
+  content: "\f04c";
+}
+.phxIcon-closed:before {
+  content: "\f04d";
+}
+.phxIcon-settled:before {
+  content: "\f052";
+}
+.phxIcon-info-circle:before {
+  content: "\f05a";
+}
+.phxIcon-unlock:before {
+  content: "\f09c";
+}
+.phxIcon-copy:before {
+  content: "\f0c5";
+}
+.phxIcon-files-o:before {
+  content: "\f0c5";
+}
+.phxIcon-floppy-o:before {
+  content: "\f0c7";
+}
+.phxIcon-save:before {
+  content: "\f0c7";
+}
+.phxIcon-list-ul:before {
+  content: "\f0ca";
+}
+.phxIcon-money:before {
+  content: "\f0d6";
+}
+.phxIcon-sort:before {
+  content: "\f0dc";
+}
+.phxIcon-unsorted:before {
+  content: "\f0dc";
+}
+.phxIcon-sort-desc:before {
+  content: "\f0dd";
+}
+.phxIcon-sort-down:before {
+  content: "\f0dd";
+}
+.phxIcon-sort-asc:before {
+  content: "\f0de";
+}
+.phxIcon-sort-up:before {
+  content: "\f0de";
+}
+.phxIcon-sitemap:before {
+  content: "\f0e8";
+}
+.phxIcon-angle-double-left:before {
+  content: "\f100";
+}
+.phxIcon-angle-double-right:before {
+  content: "\f101";
+}
+.phxIcon-angle-double-up:before {
+  content: "\f102";
+}
+.phxIcon-angle-double-down:before {
+  content: "\f103";
+}
+.phxIcon-angle-left:before {
+  content: "\f104";
+}
+.phxIcon-angle-right:before {
+  content: "\f105";
+}
+.phxIcon-angle-up:before {
+  content: "\f106";
+}
+.phxIcon-angle-down:before {
+  content: "\f107";
+}
+.phxIcon-resulted:before {
+  content: "\f111";
+}
+.phxIcon-chain-broken:before {
+  content: "\f127";
+}
+.phxIcon-unlink:before {
+  content: "\f127";
+}
+.phxIcon-unlock-alt:before {
+  content: "\f13e";
+}
+.phxIcon-sort-alpha-asc:before {
+  content: "\f15d";
+}
+.phxIcon-sort-alpha-desc:before {
+  content: "\f15e";
+}
+.phxIcon-sort-amount-asc:before {
+  content: "\f160";
+}
+.phxIcon-sort-amount-desc:before {
+  content: "\f161";
+}
+.phxIcon-sort-numeric-asc:before {
+  content: "\f162";
+}
+.phxIcon-sort-numeric-desc:before {
+  content: "\f163";
+}
+.phxIcon-trash:before {
+  content: "\f1f8";
+}
+.phxIcon-clone:before {
+  content: "\f24d";
+}

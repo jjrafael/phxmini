@@ -1,0 +1,111 @@
+.react-tabs {
+    .ReactTabs__TabList {
+        @extend .list-reset;
+        @extend .tcenter;
+        li {
+            display: inline-block;
+            cursor: pointer;
+            @include transit();
+            &:hover {
+                color: $primary;
+            }
+            &:first-child {
+                .tab-header {
+                    border-top-left-radius: 5px;
+                    border-bottom-left-radius: 5px;
+                }
+            }
+            &:last-child {
+                .tab-header {
+                    border-top-right-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                    border-right: 1px solid rgba(0,0,0,0.4);
+                }
+            }
+        }
+        .tab-header {
+            display: block;
+            padding: 5px 10px;
+            background: $bg;
+            border: 1px solid rgba(0,0,0,0.4);
+            border-right: none;
+            min-width: 70px;
+            text-align: center;
+        }
+    }
+    .ReactTabs__Tab--selected {
+        .tab-header {
+            background: $primary;
+            color: $white;
+        }
+    }
+    .ReactTabs__TabPanel--selected {
+        margin-top: -10px;
+        padding-top: 0px;
+        border: 1px solid $line-gray;
+        border-radius: 5px; 
+        .tab-content {
+            padding: 5px 10px;
+        }
+    }
+}
+
+.tabular {
+    .ReactTabs__TabList {
+        background-color: $primary-darkest;
+        padding: 0;
+        text-align: left;
+        li {
+            margin-right: 5px;
+            margin-top: 5px;
+            border-radius: 5px 5px 0px 0px;
+            cursor: pointer;
+            @include transit();
+            span.tab-header {
+                border-radius: 5px 5px 0px 0px;
+                border-width: 0px;
+                background-color: $white50;
+                color: $black;
+                font-size: 11px;
+                text-transform: uppercase;
+                padding: 8px 10px;
+                &:first-child {
+                    border-bottom-left-radius: 0px;
+                }
+                &:last-child {
+                    border-bottom-right-radius: 0px;
+                }
+            }
+            &:first-child {
+                margin-left: 5px;
+            }
+            &.ReactTabs__Tab--selected {
+                background-color: $white;
+                span.tab-header {
+                    color: $primary;
+                    background-color: $gray-lightest;
+                }
+            }
+            &:not(.ReactTabs__Tab--selected):hover {
+                background-color: $primary50;
+                color: $primary;
+            }
+        }
+    }
+    .ReactTabs__TabPanel {
+        @include nopads();
+        border: 0px;
+    }
+    &.side-nav {
+        position: relative;
+        .tab-nav {
+            width: 25%;
+        }
+        .tab-content {
+            width: 75%;
+            padding-left: 5px;
+        }
+    } 
+}
+
+

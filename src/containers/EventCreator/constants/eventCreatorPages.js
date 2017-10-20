@@ -1,0 +1,12 @@
+'use strict';
+
+const eventCreatorPages = {
+    EVENT_PATH: 'EVENT_PATH',
+    OPPONENTS: 'OPPONENTS',
+    BET_RESTRICTIONS: 'BET_RESTRICTIONS',
+
+    GET_EVENT_CREATOR_PAGE: 'GET_EVENT_CREATOR_PAGE',
+    SET_EVENT_CREATOR_PAGE: 'SET_EVENT_CREATOR_PAGE',
+};
+
+export default eventCreatorPages;

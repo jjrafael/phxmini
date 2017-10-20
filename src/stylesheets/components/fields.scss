@@ -1,0 +1,82 @@
+select {
+    height: 25px;
+    margin: 3px 0px;
+    padding: 0px 10px;
+    font-weight: 200;
+    min-width: 80px;
+    width: 100%;
+    color: $black;
+	font-size: 12px;
+}
+
+.input-wrapper {
+	margin: 5px;
+	margin-top: 0px;
+	&.no-label {
+		> input, > select {
+			margin: 0px;
+		}
+	}
+	.dualfieldbox-wrapper {
+		margin: 0px;
+	}
+	label {
+		font-size: 10px;
+		text-transform: uppercase;
+		color: $black;
+		text-align: left;
+		width: 100%;
+		display: block;
+	}
+	.error {
+		font-size: 10px;
+		color: $red;
+		text-align: right;
+		width: 100%;
+	}
+}
+
+
+//checkbox
+.checkbox {
+
+  display: flex;
+  align-items: center;
+  height: 30px;
+  /*font-family: "Roboto", Helvetica, sans-serif;*/
+  line-height: 1.5;
+
+  .checkboxIconContainer {
+    padding: 5px 0px 5px 0px;
+  }
+
+  .checkboxIcon {
+    border-radius: 50%;
+    height: 100%;
+    padding: 5px;
+    width: 20px;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 1;
+    letter-spacing: normal;
+
+    white-space: nowrap;
+  }
+
+  .-checked {
+    color: $primary-bright;
+  }
+
+  :not(.-checked) {
+    color: $primary-dark;
+  }
+
+  .-disabled {
+    color: $gray;
+  }
+
+  &.-disabled {
+    color: $gray;
+  }
+
+}

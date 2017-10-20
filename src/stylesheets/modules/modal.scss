@@ -1,0 +1,170 @@
+.modal-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    max-width: 100%;
+    height: 450px;
+    max-height: 100%;
+    z-index: 3;
+    .scrollable-body & {
+        .content {
+            height: 100%
+        }
+        .top {
+            height: 28px;
+            box-sizing: border-box;
+        }
+        .bottom {
+            height: 40px;
+            box-sizing: border-box;
+            margin: 0;
+        }
+        .body {
+            height: calc(100% - 68px);
+            box-sizing: border-box;
+            overflow: auto;
+        }
+    }
+    .confirm & {
+        height: 200px;
+        width: 500px;
+        .modal-body {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .xsmall & {
+        height: 120px;
+        width: 500px;
+    }
+    .medium & {
+        height: 300px;
+        width: 500px;
+    }
+    .medium-horizontal & {
+        height: 415px;
+        width: 500px;
+    }
+    .small & {
+        height: 200px;
+        width: 500px;
+    }
+    .small-horizontal & {
+        height: 500px;
+        width: 350px;
+    }
+    .x-large & {
+        width: 1300px;
+        height: 850px;
+    }
+    .m-large & {
+        width: 1000px;
+        height: 550px;
+    }
+    .large & {
+        width: 1000px;
+        height: 650px;
+    }
+    .small-box & {
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+    }
+
+    .full-screen & {
+        width: 100%;
+        height: 100%;
+    }
+    .wager-limits & {
+        width: 650px;
+        height: 306px;
+    }
+    .add-edit-opponent & {
+        width: 500px;
+        height: 565px;
+    }
+    .add-edit-player & {
+        width: 500px;
+        height: 275px;
+    }
+    .add-edit-kit & {
+        width: 500px;
+        height: 290px;
+    }
+    .import-opponents & {
+      width: 500px;
+      height: 355px;
+    }
+    .warn-text & {
+        .form-group {
+            padding: 13px;
+        }
+    }
+    .close-button {
+        background: $black50;
+        color: $white50;
+        // border-radius: 30px;
+        height: 32px;
+        line-height: 32px;
+        width: 32px;
+        position: absolute;
+        top: -16px;
+        right: -16px;
+        // right: 0;
+        z-index: 4;
+        text-decoration: none;
+        text-align:center;
+        cursor: pointer;
+        // opacity: 0.5;
+        border-radius: 50%;
+        @include transit();
+        &:hover {
+            background: $black50;
+            color: $white;
+        }
+    }
+}
+
+.phxcom-modal {
+    .modal-body {
+        display: flex;
+        flex-direction: column;
+    }
+    .modal-body-container {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+    }
+}
+
+.modal-main-content {
+    display: flex;
+    flex: 1 1 auto;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.modal-body {
+    @include shadow-allsides();
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: $white;
+    padding: 0px;
+    h4 {
+        margin: 0px;
+        padding: 7px;
+        background: $primary-lightest;
+        color: $black;
+        font-weight: $fw-normal;
+        font-size: $font-medium;
+    }
+    form {
+        padding: 5px;
+    }
+}

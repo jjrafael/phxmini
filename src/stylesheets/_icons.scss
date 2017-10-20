@@ -1,0 +1,49 @@
+$icon-large: 22px;
+$icon-medium: 18px;
+$icon-small: 14px;
+$icon-xsmall: 10px;
+
+.icon-large {
+    font-size: $icon-large;
+    //line-height: 24px;
+}
+
+.icon-medium {
+    font-size: $icon-medium;
+}
+
+.icon-small {
+    font-size: $icon-small;
+}
+
+.icon-xsmall {
+    font-size: $icon-xsmall;
+}
+
+.icon-letter {
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.fx-icon {
+    font-style: italic;
+    color: $red;
+    padding: 2px;
+}
+
+.phx-open {
+    color: darken($color-open, 60%);
+}
+.phx-closed, .phx-voided {
+    color: darken($color-closed, 50%);
+}
+.phx-suspended {
+    color: darken($color-suspended, 20%);
+}
+.phx-resulted {
+    color: darken($color-resulted, 50%);
+}
+.phx-settled {
+    color: darken($color-settled, 50%);
+}

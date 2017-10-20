@@ -1,0 +1,234 @@
+// --------------------------------------------------
+// start: Primary and Identity colors
+// --------------------------------------------------
+$white: #fff;
+$black: #000;
+$black-secondary: #34383c;
+$transparent: rgba(0,0,0,0);
+
+$white10: rgba(255,255,255,0.1);
+$white25: rgba(255,255,255,0.25);
+$white50: rgba(255,255,255,0.5);
+$white75: rgba(255,255,255,0.75);
+$black10: rgba(0,0,0,0.1);
+$black25: rgba(0,0,0,0.25);
+$black50: rgba(0,0,0,0.5);
+$black75: rgba(0,0,0,0.75);
+
+$gray: #aaa;
+$gray-light: #cccccc;
+$gray-lighter: #e2e2e2;
+$gray-lightest: #f3f3f3;
+$gray-dark: #848484;
+$gray-darker: #565656;
+$gray-darkest: #323232;
+$gray-darker: #323232;
+$gray-secondary: #f9f9f9;
+$gray-lighter50: rgba(226, 226, 226, 0.5);
+
+$primary: #418aca;
+$primary-bright: #25bbff;
+$primary-light: #599edb;
+$primary-lighter: #80b4e2;
+$primary-lightest: #ebf5ff;
+$primary-dark: #3c70a0;
+$primary-darker: #274c6e;
+$primary-darkest: #172d41;
+$primary50: rgba(65,138,202,0.5);
+$primary25: rgba(65,138,202,0.25);
+
+$secondary: #7bed98;
+$secondary-bright: #39ff1f;
+$secondary-light: #97ffb2;
+$secondary-lighter: #b8ffcb;
+$secondary-lightest: #DCFFE6;
+$secondary-dark: #67d486;
+$secondary-darker: #4D9B5B;
+$secondary-darkest: #244d2b;
+$secondary75: rgba(123,237,152,0.75);
+$secondary50: rgba(123,237,152,0.5);
+$secondary25: rgba(123,237,152,0.25);
+
+// --------------------------------------------------
+// end: Primary and Identity colors
+// --------------------------------------------------
+
+// --------------------------------------------------
+// start: Background and Outline colors
+// --------------------------------------------------
+
+$bg: $white;
+$bg-wrapper: $bg;
+$bg-table: $white;
+$dark-subbg: $black;
+$line-gray: $gray-lighter;
+$line-grid: rgba(0,0,0,0.05);
+
+$purple-cell-odd: #ececfe;
+$purple-cell-even: #d0d0f1; 
+
+// --------------------------------------------------
+// end: Background colors
+// --------------------------------------------------
+
+// --------------------------------------------------
+// start: Specific colors
+// --------------------------------------------------
+
+$red: #d01515;
+$red-darker: #e60b0c;
+$red-orange: #fb5921;
+$peach: #f66b54;
+$dark-orange: #a73e19;
+$orange: #FF9800;
+$dirt-yellow: #ab7c17;
+$yellow: #ffb900;
+$green: #2ad672;
+$green-dark: #239653;
+$greenery: #6fba65;
+$dark-green: #11965f;
+$dirty-green: #95bd1c;
+$aqua-green: #28CE89;
+$blue: #052cb1;
+$light-blue: #08c;
+$cyan: #22e8ff;
+$purple: #6330ff;
+$purple-light: #9371ad;
+$pink: #ff91dc;
+
+// --------------------------------------------------
+// end: Specific colors
+// --------------------------------------------------
+
+// --------------------------------------------------
+// start: Status colors
+// --------------------------------------------------
+
+$color-open: #e0ffe0;
+$color-closed: #ffe6e6;
+$color-suspended: #f0e68c;
+$color-resulted: #cbbef3;
+$color-settled: #d9d9d9;
+$color-open-darker: #41d741;
+$color-closed-darker: #ff4848;
+$color-suspended-darker: #ffeb37;
+$color-resulted-darker: #8d68ff;
+$color-settled-darker: #a8a8a8;
+
+$clr-risk: #d0fbe7;
+$clr-cust: #eae0bf;
+$clr-evnt: #E4FBD8;
+$clr-rslt: #bbeb79;
+$clr-chat: #79dceb;
+$clr-inst: #ffc55e;
+$clr-rprt: #cfa0d4;
+$clr-oper: #FFE0E1;
+$clr-paym: #dae3e8;
+$clr-util: #f9a587;
+$clr-crm: #5e6cff;
+$clr-betatn: #dae3e8;
+// --------------------------------------------------
+// end: Status colors
+// --------------------------------------------------
+
+
+// --------------------------------------------------
+// start: Toast Status colors
+// --------------------------------------------------
+
+$toast-success-bg: #def2d6;
+$toast-success-color: #5d7155;
+
+$toast-error-bg: #ebc8c4;
+$toast-error-color: #c55861;
+
+// --------------------------------------------------
+// end: Toast Status colors
+// --------------------------------------------------
+
+// --------------------------------------------------
+// start: State colors
+// --------------------------------------------------
+
+$active: $primary;
+$link: $secondary;
+$hover-link: $secondary-dark;
+$primary-hover: $primary-darker;
+$secondary-hover: $secondary-dark;
+$disabled: $gray-dark;
+$color-success: $greenery;
+$color-warning: $dark-orange;
+$color-error: $red;
+$color-text: $gray-darker;
+$color-emphasis: $primary;
+$color-light: $gray-light;
+$pathtree-txt-clr: $black;
+$error-bg: #ffb5b5;
+$error-fg: #b61f1f;
+$xylo1: #ea462d;
+$xylo2: #773f98;
+$xylo3: #4696EF;
+
+// --------------------------------------------------
+// end: State colors
+// --------------------------------------------------
+
+// --------------------------------------------------
+// start: Sports colors
+// --------------------------------------------------
+
+$BASK: #ef4e23;
+$BASE: #144a9a;
+$FOOT: #3BB71D;
+$GREY: #f4930c;
+$TENN: #239AD1;
+$MOSP: #f4930c;
+$GOLF: #f4930c;
+$AMFB: #a65629;
+$CRIC: #f4930c;
+$SNOO: #115558;
+$RUGU: #274b05;
+$DART: #ca0000;
+$HAND: #0b4c6e;
+$BEVO: #857563;
+$VOLL: #8415bb;
+$FUTS: #d3dd40;
+$ICEH: #25c5c3;
+$BADM: #cc9b40;
+$WINT: #f4930c;
+$AURL: #f4930c;
+$BOXI: #f4930c;
+$CYCL: #f4930c;
+$FIEL: #f4930c;
+$WATE: #f4930c;
+$TABL: #ff9a00;
+$FLOO: #c0c0c0;
+$FUTS: #949C1E;
+$HORS: #925900;
+$BOWL: #c0c0c0;
+$OLYM: #c0c0c0;
+$BEAC: #c0c0c0;
+$RALL: #c0c0c0;
+$CHES: #c0c0c0;
+$GAEL: #c0c0c0;
+$BAND: #c0c0c0;
+$NINE: #c0c0c0;
+$SWIM: #c0c0c0;
+
+
+
+// --------------------------------------------------
+// end: Sports colors
+// --------------------------------------------------
+
+
+// --------------------------------------------------
+// start: CM specific colors
+// --------------------------------------------------
+$sidebar-bg: #3d464d;
+$sidebar-color: #adafb2;
+$sidenav-lvl1-bg: #2d6799;
+$operator-message-color: #325879;
+// --------------------------------------------------
+// end: CM specific colors
+// --------------------------------------------------

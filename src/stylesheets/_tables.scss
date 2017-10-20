@@ -1,0 +1,400 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    th ,tfoot td {
+        background: $gray-lightest;
+    }
+    th,td {
+        border: 1px solid #cacaca;
+        padding: 3px;
+        max-width:150px;
+        white-space:nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        &.cell-smallw {
+            width: 100px;
+            input[type="text"] {width: 100px}
+        }
+        select, input[type=text], input[type=number], input[type=email], , input[type=password] {
+            width: 100%;
+            box-sizing: border-box;
+        }
+        select, label {
+            box-sizing: border-box;
+        }
+    }
+    &.clickable-rows {
+        &:not(.disabled) {
+            tbody > tr {
+                @include transit();
+                cursor: pointer;
+                &:hover {
+                    background-color: $primary-lightest;
+                    color: $primary;
+                }
+            }
+        }
+    }
+    thead.header-row {
+        background-color: $gray-lighter;
+        tr {
+            th {
+                border-color: $primary50;
+                font-weight: $fw-normal;
+                border-top: 0px;
+            }
+        }
+    }
+    .colored-cell {
+        &.closed {
+            background-color: $color-closed
+        }
+        &.suspended {
+            background-color: $color-suspended;
+        }
+        &.open {
+            background-color: $color-open;
+        }
+    }
+}
+
+//cell actions group
+.cell-action-wrapper {
+    position: relative;
+    padding-top: 20px;
+    &:not(.disabled):hover {
+        .cell-actions {
+            display: block;
+        }
+        .icon-custom {
+            opacity: 1;
+        }
+        .cell-trigger:hover {
+            color: $primary;
+        }
+    }
+    &.disabled {
+        color: $gray;
+        opacity: 0.5;
+    }
+    .cell-trigger {
+        cursor: pointer;
+        text-align: center;
+    }
+    .cell-actions {
+        position: absolute;
+        background: $white;
+        border: 1px solid $line-gray;
+        display: none;
+        top: 0px;
+        left: 25px;
+        > div {
+            padding: 3px 5px;
+            @include transit();
+            &:not(.disabled) {
+                cursor: pointer;
+                &:hover {
+                    color: $primary;
+                    background-color: $gray-lightest;
+                }
+            }
+            &.disabled {
+                cursor: not-allowed;
+                color: $gray;
+            }
+        }
+    }
+    &.open {
+        .cell-trigger {
+            color: $primary;
+        }
+    }
+}
+.ReactTable-fixed-header {
+    .header-container {
+        height: auto;
+        box-shadow: 0 2px 15px 0 rgba(0,0,0,0.15);
+        position: relative;
+        display: table;
+        width: 100%;
+        .row {
+            display: table-row;
+        }
+        .column {
+            display: table-cell;
+            padding: 5px;
+            box-sizing:border-box;
+            text-align: center;
+            vertical-align: middle;
+            border: 1px solid rgba(0,0,0,0.05);
+            font-weight: normal;
+        }
+    }
+    .table-container {
+        height: 400px;
+        overflow: auto;
+    }
+}
+
+.ReactTable {
+    &.hide-header {
+        .-header {
+            display: none;
+        }
+    }
+    .rt-tbody {
+        .rt-td {
+            &.no-padding {
+                padding: 0;
+            }
+            .colored-cell {
+                padding: 7px 5px;
+            }
+        }
+    }
+    .rt-tr {
+        &.clickable-rows {
+            cursor: pointer;
+        }
+        &.selected {
+            font-weight: bold;
+        }
+    }
+
+}
+
+//React Table
+.ReactTable {
+    .-loading {
+        .-loading-inner {
+            font-weight: bold;
+            margin-top: -17px;
+        }
+    }
+    &.-striped {
+        .rt-tbody {
+            .rt-tr {
+                &.-odd {
+                    background-color: $gray-lightest;
+                }
+                &.-even {
+                    background-color: $white;
+                }
+            }
+        }
+    }
+    .rt-table {
+        .rt-thead {
+            .rt-tr {
+                background-color: $gray-lighter;
+                .rt-td {
+                    padding: 5px;
+                }
+            }
+        }
+    }
+    &.-highlight {
+        .rt-tbody {
+            .rt-tr {
+                &:not(.-padRow):hover {
+                    background-color: $primary-lightest !important;
+                }
+            }
+        }
+    }
+    .rt-tbody {
+        .rt-tr {
+            .rt-td {
+                padding: 5px;
+                font-size: $font-grid;
+            }
+            &.closed-row, &.closed-row:hover {
+                background: $color-closed;
+            }
+            &.suspended-row, &.suspended-row:hover {
+                background: $color-suspended;
+            }
+            &.open-row, &.open-row:hover {
+                background: $color-open;
+            }
+            &.settled-row, &.settled-row:hover {
+                background: $primary-lightest;
+            }
+            &.resulted-row, &.resulted-row:hover {
+                background: $primary-lightest;
+            }
+            &.totals-header-row, &.totals-header-row:hover {
+                background: darken($gray, 10%);
+                color: $white;
+            }
+            &.totals-row, &.totals-row:hover {
+                background: $gray;
+                color: $white;
+            }
+        }
+    }
+
+    .rt-thead .rt-th.txt-wrap {
+        white-space: normal;
+    }
+    .-pagination {
+        .-btn {
+            &:not([disabled]) {
+                background: $primary-lightest;
+                color: $primary;
+                &:hover {
+                    background: $primary;
+                }
+            }
+        }
+    }
+}
+
+.table-wrapper {
+    background: $bg-table;
+    padding-top: 0px!important;
+    &.table-scroll {
+        overflow-x: auto;
+    }
+    &.table-minh {
+        min-height: 200px;
+    }
+    &.table-purple {
+        .rt-tbody {
+            .rt-tr-group {
+                .rt-tr {
+                    font-weight: 400;
+                    &.-odd {
+                        background-color: $purple-cell-odd;
+                    }
+                    &.-even {
+                        background-color: $purple-cell-even;
+                    }
+                    .rt-td {
+                        border-right: 1px solid $white50;
+                        &.td-cell-action {
+                            padding: 0px;
+                            .icon-custom {
+                                @include center();
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* Componentization */
+.componentized { /*TODO remove this class wrapper when all tables are updated*/
+  .ReactTable {
+
+    .rt-table {
+        .-headerGroups {
+          .rt-tr {
+            .rt-th {
+                background-color: $primary;
+                font-weight: 200;
+                color: #FFFFFF;
+            }
+          }
+        }
+
+        .-header {
+          .rt-tr {
+            .rt-th {
+              background-color: $primary-light;
+              font-weight: 100;
+              color: #FFFFFF;
+            }
+
+            .-sort-asc {
+              box-shadow: inset 0 3px 0 0 rgba($primary-dark,0.8)
+            }
+
+            .-sort-desc{
+              box-shadow: inset 0 -3px 0 0 rgba($primary-dark,0.8)
+            }
+          }
+        }
+    }
+
+    &.-highlight {
+        .rt-tbody {
+            .rt-tr {
+                &:not(.-padRow):hover {
+                    background-color: $primary-lightest !important;
+                }
+            }
+        }
+    }
+
+    .rt-tr {
+        &.clickable-rows {
+            cursor: pointer;
+        }
+        &.selected-row-color {
+            font-weight: bold;
+            background-color: $primary-lightest !important;
+        }
+    }
+
+    .-pagination {
+      z-index: 1;
+      display: block;
+      text-align: right;
+      padding: 3px;
+      box-shadow: 0 0px 15px 0px rgba(black, .1);
+      border-top: 2px solid rgba(black, .1);
+      padding: 3px 10px;
+      .pagination-arrows {
+          /*margin-top: 6px;*/
+          float: right;
+      }
+      .-previous,
+      .-next {
+        display: inline-block;
+        text-align: center;
+        margin-left: 5px;
+        margin-top:
+        div {
+          font-size: 25px;
+          vertical-align: middle;
+        }
+      }
+
+      .-center {
+        display: inline-block;
+        text-align:center;
+        margin-bottom:0;
+      }
+
+      .-pageInfo {
+        display: inline-block;
+        margin: 3px 10px;
+        white-space: nowrap;
+        vertical-align: middle;
+      }
+
+      .-pageJump {
+        display:inline-block;
+        input {
+          width: 70px;
+          text-align:center;
+        }
+      }
+
+      .-pageSizeOptions {
+        margin: 3px 10px;
+      }
+
+      .select-wrap select {
+          height: 25px;
+          margin: 3px 0px;
+          padding: 0px 10px;
+          font-weight: 200;
+      }
+    }
+  }
+}

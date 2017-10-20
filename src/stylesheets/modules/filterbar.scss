@@ -1,0 +1,86 @@
+.header-utilities-container {
+    border-bottom: 1px solid;
+    position: relative;
+    height: $header-utilities-height;
+    .actions {
+        border-right: 1px solid;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: $header-utilities-action-width;
+        &.list-reset {
+            display: none;
+        }
+        a,span {
+            display: block;
+            height: $header-utilities-height / 2;
+            line-height: $header-utilities-height / 2;
+            box-sizing: border-box;
+            padding: 5px 8px;
+            text-align: center;
+        }
+    }
+    .filters-container {
+        padding: 5px;
+        background-color: $white;
+        .filter-field {
+            display: inline-block;
+            padding: 0px 3px 3px 3px;
+            vertical-align: middle;
+        }
+        .select {
+
+        }
+    }
+    h3 {
+        @include h3();
+        &.inline-fields {
+            display: inline;
+            margin-right: 10px;
+        }
+    }
+}
+
+.tabgrp-container {
+    .tabgrp {
+        .tab.mainfilter {
+
+        }
+    }
+    .filter-searchevent {
+        min-width: 200px;
+        float: right;
+        margin-top: 4px;
+        margin-right: 5px;
+        .block-input {
+            padding: 0px 10px;
+        }
+    }
+    .filter-resetfilter {
+        float: right;
+        button {
+            padding: 0 15px;
+        }
+    }
+    .filter-row-height {
+        float: right;
+        margin: 0 10px 0 5px;
+        line-height: 30px;
+        color: #fff;
+    }
+    button {
+        background: $white;
+        border: 1px solid $gray;
+        border-radius: 3px;
+        margin-top: 4px;
+        height: 24px;
+        line-height: 20px;
+        text-align: center;
+        padding: 0 5px;
+        @include transit();
+        cursor: pointer;
+        font-weight: 200;
+        @include box-outline($primary-lighter, $primary-darkest);
+        box-shadow: none;
+    }
+}

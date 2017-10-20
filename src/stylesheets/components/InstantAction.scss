@@ -1,0 +1,212 @@
+#app-instant-action{
+	* {
+		box-sizing: border-box;
+	}	
+	.description-header{
+		display: none !important;
+	}
+	.bet-description{
+		margin: 0px;
+	    padding: 3px 5px;
+	    font-size: 11px;
+	    width: 100%;
+	    background-color: $gray-lighter;
+	}	
+	.ReactTabs {
+		.ReactTabs__TabList {
+			margin: 0px;
+			padding-top: 10px;
+			background-color: $primary-darker;
+			width: 100%;
+			.tab-header {
+				padding: 8px 5px;
+				font-size: 11px;
+			}
+			.ReactTabs__Tab {
+				margin-right: 5px;
+				span {
+					border-radius: 5px 5px 0px 0px;
+					border: 0px;
+					background-color: $white50;
+					color: $black;
+					&:hover {
+						background-color: $white75;
+					}
+				}
+				&.ReactTabs__Tab--selected {
+					span {
+						color: $primary;
+						background-color: $white;
+					}
+				
+				}
+			}
+		}
+	}
+	.sidebar-container {
+		.bet-filters {
+			.bet-type-filter,
+			.markets-filter,
+			.sports-filter {
+				border-color: $line-gray;
+				.toggle-button {
+					font-size: 12px;
+					color: $primary-darkest;
+				}
+				.body {
+					> div {
+						border-color: $line-gray!important;
+						&:last-child {
+							border-bottom: 0px!important;
+						}
+					}
+				}
+				.sports {
+					@include transit();
+					overflow-x: hidden;
+					overflow-y: auto;
+					max-height: 400px;
+					&.disabled {
+						height: 0px;
+					    height: 0px;
+					    padding: 0px;
+					}
+				}
+			}
+		}
+		.bet-display {
+			.input-wrapper {
+				margin-top: 10px;
+				label {
+					font-size: 11px;
+				}
+			}
+			.profileformat-wrapper {
+				.form-head {
+					border-bottom: 1px solid $primary;
+				    padding-bottom: 5px;
+				    display: flex;
+				    justify-content: space-between;
+				    align-items: center;
+				    .form-head-txt {
+				    	font-size: 14px;
+					    color: $primary;
+					    padding-left: 5px;
+				    }
+				    .btn-newformat {
+			    	    padding: 0px 10px;
+    					box-shadow: none;
+    					i {
+    						font-size: 14px;
+    					}
+				    }
+				}
+				.colorpicker-wrap {
+					display: flex;
+					.input-wrapper:last-child {
+						margin-left: 20px;
+					}
+				}
+			}
+		}
+	}
+	.page-main {
+		.main-tabs {
+			.ReactTabs__TabList {
+				width: 100%;
+				padding: 10px 10px 0px 10px;
+				.ReactTabs__Tab {
+				    //width: auto;
+				}
+			}
+			.ReactTable {
+                .rt-tbody {
+                    .rt-tr-group {
+						background: white;
+						height: auto !important;
+                    }
+                }
+                &.bets-table,
+                &.accounts-table {
+                	.rt-td.icon-cell {
+                		color: $primary;
+                		font-size: 18px;
+                	}
+                	.rt-td.date-cell {
+                		font-size: 11px;
+                		& > div > div {
+							width: 70px;
+							word-wrap: break-word;
+							overflow-wrap: break-word;
+							word-break: break-all;
+							word-break: break-word;
+                		}
+                	}
+                }
+            }
+		}
+		.connected-button {
+			margin: 0px;
+			> div {
+				background: transparent;
+				color: $green;
+				&:after {
+					content: '';
+					right: 20px;
+					@include sq(10px);
+					border-radius: 50%;
+					background-color: $green;
+					position: absolute;
+				}
+				&.connected {
+					color: $green;
+					background: transparent;
+					padding-right: 40px;
+					&:after {
+						background-color: $green;
+					}
+				}
+				&.disconnected {
+					color: $red;
+					background: transparent;
+					padding-right: 40px;
+					&:after {
+						background-color: $red;
+					}
+				}
+			}
+		}
+	}
+}
+.instant-action-modal-content {
+	width: 100%;
+	> p {
+		margin: 5px 0;
+	}
+}
+.instant-action-bet-events {
+    label {
+        display: flex;
+        flex-direction: row;
+        margin: 2px 0;
+        > input {
+        	flex: 0 0 25px;
+        	margin: 0;
+        }
+        > span {
+			flex: 1 1 auto;
+        }
+    }
+}
+
+
+/*Safari 9.0-10  only*/
+_::-webkit-:not(:root:root),
+_:-webkit-full-screen:not(:root:root),
+_::-webkit-full-page-media, _:future, :root {
+
+  	#app-instant-action .sidebar-container .bet-filters .sports-filter .sports > .sport-item {
+		margin-bottom: 15px;
+	}
+
+}

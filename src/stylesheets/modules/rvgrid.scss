@@ -1,0 +1,160 @@
+/*Sticky table header*/
+
+$results-viewer-filter-height: 40px;
+$results-viewer-footer-height: 40px;
+.rv-filters-container {
+    height: $results-viewer-filter-height;
+    background-color: $primary-darkest;
+    color: $primary-lightest;
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    padding: 0 10px;
+    label {
+        user-select: none;
+    }
+    .phxico {
+        width: 22px;
+        height: 16px;
+        vertical-align: bottom;
+        &.phx-settled {
+            color: $color-settled-darker;
+        }
+        &.phx-open {
+            color: $color-open-darker;
+        }
+        &.phx-closed {
+            color: $color-closed-darker;
+        }
+        &.phx-suspended {
+            color: $color-suspended-darker;
+        }
+        &.phx-resulted {
+            color: $color-resulted-darker;
+        }
+    }
+}
+.filters-group {
+    display: table-cell;
+    vertical-align: middle;
+}
+.start-time-sort {
+    width: 340px;
+}
+.filter-row-height {
+    width: 220px;
+}
+.filter-label {
+    font-weight: bold;
+    color: $primary;
+    margin-right: 5px;
+}
+.page-results-viewer {
+    bottom: 0;
+    .virtual-list-container[style] {
+        top: $results-viewer-filter-height;
+        bottom: 0;
+        height: calc( 100% - #{$results-viewer-filter-height} - #{$results-viewer-footer-height});
+        .market-row .column {
+            background-color: transparent;
+        }
+    }
+    .virtual-list-footer {
+        position: absolute;
+        bottom: 0 - $results-viewer-footer-height;
+        width: 100%;
+        height: $results-viewer-footer-height;
+        background: #fff;
+        line-height: $results-viewer-footer-height;
+        text-align: center;
+    }
+    .column-score,
+    .column-resultby,
+    .column-cutofftime,
+    .column-settleddate {
+        text-align: center;
+    }
+    .row:not(.event-row) {
+        overflow: hidden;
+        border-bottom: 1px solid;
+        font-size: 12px;
+        font-weight: 300;
+        &.open {
+            border-bottom-color: darken($color-open, 8%);
+        }
+        &.suspended {
+            border-bottom-color: darken($color-suspended, 10%);
+        }
+        &.closed {
+            border-bottom-color: darken($color-closed, 10%);
+        }
+        &.settled {
+            border-bottom-color: darken($color-settled, 10%);
+        }
+        &.resulted {
+            border-bottom-color: darken($color-resulted, 10%);
+        }
+    }
+    .market-row {
+        .column {
+            border-right: 1px solid;
+            position: relative;
+            z-index: 5;
+        }
+        &.open {
+            .column {
+                border-right-color: darken($color-open, 8%);
+            }
+        }
+        &.suspended {
+            .column {
+                border-right-color: darken($color-suspended, 10%);
+            }
+        }
+        &.closed {
+            .column {
+                border-right-color: darken($color-closed, 10%);
+            }
+        }
+        &.settled {
+            .column {
+                border-right-color: darken($color-settled, 10%);
+            }
+        }
+        &.resulted {
+            .column {
+                border-right-color: darken($color-resulted, 10%);
+            }
+        }
+        &.updated {
+            .column {
+                border-right-color: transparent;
+            }
+        }
+        &.open,
+        &.suspended,
+        &.closed,
+        &.settled,
+        &.resulted {
+            border-top: none;
+        }
+    }
+
+    .event-parent-desc {
+        margin: 0 4px 0 12px;
+        font-weight: 300;
+    }
+    .event-start-time {
+        font-style: italic;
+    }
+
+    .ReactVirtualized__Grid__innerScrollContainer .row[style] .column.event {
+        padding-left: 0;
+        h4 {
+            margin-left: 2px;
+        }
+    }
+    .ReactVirtualized__Grid__innerScrollContainer .event-row p {
+        margin-left: 2px;
+    }
+}

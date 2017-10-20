@@ -1,0 +1,53 @@
+.login-wrapper {
+    width: 30%;
+    height: 350px;
+    margin: 0 auto;
+    margin-top: 70px;
+    background: $black50;
+    border-radius: 3px;
+    padding: 20px;
+    border: 1px solid $xylo1;
+    form {
+        position: relative;
+    }
+    .logo-onbody {
+        @include wh(100%, 130px);
+        background: url('../assets/logos/phx-title.png') no-repeat center;
+        background-size: auto;
+        margin-bottom: 20px;
+        position: relative;
+        span {
+            position: absolute;
+            color: $secondary;
+            font-size: 12px;
+            text-transform: uppercase;
+            width: 100%;
+            bottom: -25px;
+            text-align: center;
+        }
+    }
+    .login-head {
+        width: 100%;
+        display: block;
+        margin: 20px auto;
+        border-bottom: 1px solid $white50;
+        h3 {
+            color: $gray-dark;
+            font-weight: 300;
+        }
+    }
+    .login-container{
+        width: 100%;
+        margin: 0 auto;
+        input {
+            border-radius: 3px;
+            width: 100%;
+            &:first-child {
+                margin-bottom: 5px;
+            }
+        }
+    }
+    .btn-action {
+        margin-top: 20px;
+    }
+}

@@ -1,0 +1,177 @@
+/*phxicons helpers*/
+.icon-outer-2x {
+  transform: scale(1.5);
+}
+.phx-lg {
+  font-size: 1.33333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+.phx-2x {
+  font-size: 1.9em;
+}
+.phx-3x {
+  font-size: 3em;
+}
+.phx-4x {
+  font-size: 4em;
+}
+.phx-5x {
+  font-size: 5em;
+}
+.phx-fw {
+  width: 1.28571429em;
+  text-align: center;
+}
+.phx-ul {
+  padding-left: 0;
+  margin-left: 2.14285714em;
+  list-style-type: none;
+}
+.phx-ul > li {
+  position: relative;
+}
+.phx-li {
+  position: absolute;
+  left: -2.14285714em;
+  width: 2.14285714em;
+  top: 0.14285714em;
+  text-align: center;
+}
+.phx-li.phx-lg {
+  left: -1.85714286em;
+}
+.phx-border {
+  padding: .2em .25em .15em;
+  border: solid 0.08em #eeeeee;
+  border-radius: .1em;
+}
+.phx-pull-left {
+  float: left;
+}
+.phx-pull-right {
+  float: right;
+}
+.phx-pull-left {
+  margin-right: .3em;
+}
+.phx-pull-right {
+  margin-left: .3em;
+}
+/* Deprecated as of 4.4.0 */
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+.fa.pull-left {
+  margin-right: .3em;
+}
+.fa.pull-right {
+  margin-left: .3em;
+}
+.phx-spin {
+  -webkit-animation: fa-spin 2s infinite linear;
+  animation: fa-spin 2s infinite linear;
+  display: inline-block; /* PUZZLE: fa-spin doesn't work on inline elements? */
+}
+.phx-pulse {
+  -webkit-animation: fa-spin 1s infinite steps(8);
+  animation: fa-spin 1s infinite steps(8);
+}
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+.phx-rotate-90 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.phx-rotate-180 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.phx-rotate-270 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+.phx-flip-horizontal {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+  -webkit-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+.phx-flip-vertical {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  -webkit-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
+:root .phx-rotate-90,
+:root .phx-rotate-180,
+:root .phx-rotate-270,
+:root .phx-flip-horizontal,
+:root .phx-flip-vertical {
+  filter: none;
+}
+.phx-stack {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle;
+}
+.phx-stack-1x,
+.phx-stack-2x {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+.phx-stack-1x {
+  line-height: inherit;
+}
+.phx-stack-2x {
+  font-size: 2em;
+}
+.phx-inverse {
+  color: #ffffff;
+}
+
+.btn-box > .phxico {
+  width: 100%;
+}
+
+.ico-circle {
+  &:before {
+    border-radius: 15px;
+    font-size: 8px;
+    color: #fff;
+    background: green;
+    text-align: center;
+  }
+}

@@ -1,0 +1,22 @@
+
+.nav-menu {
+    &.vertical {
+        .menu-item {
+            @extend .padding-small;
+            display: block;
+            a {
+                display: block;
+                text-decoration: none;
+            }
+        }
+    }
+    &.bordered {
+        border: 1px solid $gray-light;
+        .menu-item {
+            border-bottom: 1px solid $gray-light;
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+}

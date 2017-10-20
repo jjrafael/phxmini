@@ -1,0 +1,241 @@
+a {
+    color: $secondary-darker;
+}
+
+ul {
+    list-style: none;
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+label {
+    margin-right: 20px;
+    > input[type="checkbox"], > input[type="radio"] {
+        margin-right: 5px;
+    }
+}
+
+.main-bg {
+    position: absolute;
+    @include wh(100%, 100vh);
+    //background: url(../assets/img/bg.png) center no-repeat;
+    // @include gradient-alert();
+    background: linear-gradient(270deg, $xylo1, $xylo2, $xylo3);
+    background-position: 50% 0;
+    background-size: 200% 200%;
+}
+
+.loading.tcenter {
+    font-size: 30px;
+    color: $primary;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+    }
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+.fleft {
+    float: left;
+}
+
+.fright {
+    float: right;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.fclear {
+    clear: both;
+    float: none;
+}
+
+.block {
+    display: block;
+}
+
+.ftop {
+    position: absolute;
+    top: 10px;
+    &.fright {
+        right: 10px;
+    }
+    &.fleft {
+        left: 10px;
+    }
+}
+
+.full-height {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.tcenter {
+    text-align: center;
+}
+
+.tleft {
+    text-align: left;
+}
+
+.tright {
+    text-align: right;
+}
+
+.push-left {
+    margin-left: 5px;
+}
+
+.push-right {
+    margin-right: 5px;
+}
+
+.half {
+    width: calc(50% - 5px);
+    box-sizing: border-box;
+}
+
+.list-reset {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nopads {
+    @include nopads();
+}
+.no-pointer-events {
+    pointer-events: none;
+}
+
+.padding-small {
+    padding: 5px;
+}
+.padding-medium {
+    padding: 10px;
+}
+.padding-large {
+    padding: 15px;
+}
+
+.txt-ellipsis {
+    @include ellipsis();
+}
+
+.txt-wrap {
+    @include txtwrap();
+}
+
+.txt-capitalize {
+    text-transform: capitalize;
+}
+
+.status-lbl-icon {
+    text-transform: uppercase;
+    font-size: $font-small;
+    padding-left: 20px;
+    position: relative;
+    &:before {
+        @include pseudo-status-icon();
+        @include sq(10px);
+        border-radius: 5px;
+    }
+}
+
+.info-msg {
+    .phx-warning {
+        color: $red;
+        margin-right: 10px;
+    }
+    .phx-warning {
+        color: $yellow;
+    }
+}
+
+.loading-section {
+    font-color: $primary;
+    font-size: $font-xlarge;
+    width: 100%;
+    min-height: 100px;
+    text-align: center;
+    margin-top: calc(50% - 8px);
+}
+
+.loading-overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: $black75;
+    animation: fade-in 2s ease;
+    animation-iteration-count: 1;
+    i {
+        color: $white;
+        font-size: 30px;
+        margin-top: 30px;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.text-uppercase {
+    text-transform: uppercase;    
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+.flex {
+    display: flex;
+}
+.flex--grow {
+    flex: 1 1 auto;
+}
+.flex--shrink {
+    flex: 0 0 auto;
+}
+.flex--row {
+    flex-direction: row;
+}
+.flex--column {
+    flex-direction: column;
+}
+.flex--align-center {
+    align-items: center;
+}
+.flex--align-top {
+    align-items: flex-start;
+}
+.flex--align-bottom {
+    align-items: flex-end;
+}
+.flex--justify-center {
+    justify-content: center;
+}
+.flex--align-self-top {
+    align-self: flex-start;
+}
+.flex--align-self-bottom {
+    align-self: flex-end;
+}
+.flex--align-self-center {
+    align-self: center;
+}

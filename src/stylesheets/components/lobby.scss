@@ -1,0 +1,97 @@
+#app-lobby {
+	header {
+		.logo:before {
+			display: none;
+		}
+	}
+	.page-container {
+		background-color: $gray-lightest;
+	}
+	.btn-launch {
+		float: left;
+		margin-right: 10px;
+		margin-bottom: 10px;
+		&[data-app="Risk Manager"] {
+			.app-icon {
+				background-image: url(../assets/logos/risk-manager.png);
+				background-color: $clr-risk;
+			}
+		}
+		&[data-app="Customer Manager"] {
+			.app-icon {
+				background-image: url(../assets/logos/customer-manager.png);
+				background-color: $clr-cust;
+			}
+		}
+		&[data-app="Event Creator"] {
+			.app-icon {
+				background-image: url(../assets/logos/event-creator.png);
+				background-color: $clr-evnt;
+			}
+		}
+		&[data-app="Results Viewer"] {
+			.app-icon {
+				background-image: url(../assets/logos/results-viewer.png);
+				background-color: $clr-rslt;
+			}
+		}
+
+		&[data-app="Customer Chat"] {
+			.app-icon {
+				background-image: url(../assets/logos/customer-chat.png);
+				background-color: $clr-chat;
+			}
+		}
+
+		&[data-app="Instant Action"] {
+			.app-icon {
+				background-image: url(../assets/logos/instant-action.png);
+				background-color: $clr-inst;
+			}
+		}
+
+		&[data-app="Reports Manager"] {
+			.app-icon {
+				background-image: url(../assets/logos/reports-manager.png);
+				background-color: $clr-rprt;
+			}
+		}
+		&[data-app="Operator Manager"] {
+			.app-icon {
+				background-image: url(../assets/logos/operator-manager.png);
+				background-color: $clr-oper;
+			}
+		}
+		&[data-app="Payment Handler"] {
+			.app-icon {
+				background-image: url(../assets/logos/payment-handler.png);
+				background-color: $clr-paym;
+			}
+		}
+		&[data-app="Utilities"] {
+			.app-icon {
+				background-image: url(../assets/logos/utilities.png);
+				background-color: $clr-util;
+			}
+		}
+		&[data-app="Bet Attendant"] {
+			.app-icon {
+				background-image: url(../assets/logos/bet-attendant.png);
+				background-color: $clr-betatn;
+			}
+		}
+		&[data-app="Combination Risk Manager"] {
+			.app-icon {
+				background-image: url(../assets/logos/combi-risk-manager.png);
+				background-color: $clr-crm;
+			}
+			//because it has longer description
+			span {
+			    line-height: 12px;
+			    margin-top: 8px;
+			    display: block;
+			    margin-left: 60px;
+			}
+		}
+	}
+}

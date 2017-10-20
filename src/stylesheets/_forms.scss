@@ -1,0 +1,490 @@
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+select, input[type=text], input[type=number], input[type=email], , input[type=password] {
+    border-radius: $border-radius-base;
+    background-color: $white;
+    color: $gray-darker;
+    padding: 1px 5px;
+    height: $input-h;
+    line-height: $input-h;
+    border: 1px solid $line-gray;
+    max-width: 100%;
+    font-weight: $fw-normal;
+    &[disabled] {
+        background-color: $gray-lighter;
+        color: $gray-lightest;
+        border: 1px solid $gray-lightest;
+    }
+}
+
+textarea.block-input {
+    max-width: 100%;
+    height: 40px;
+    border-color: $line-gray;
+}
+
+input.invalid {
+    background-color: lighten($red, 20%);
+}
+.field-err {
+    font-size: $font-small;
+    color: $red;
+    font-style: italic;
+    display: block;
+    pointer-events: none;
+}
+
+.block-input {
+    display: block;
+    width: 100%;
+    box-sizing:border-box;
+    height: 24px;
+    font-weight: 200;
+    &.date {
+        width: calc(100% - 40px;);
+        margin-right: 10px;
+        float: left;
+    }
+}
+
+.short-input {
+    width: 45px;
+}
+
+.input-with-icon {
+    position: relative;
+    border-radius: 5px;
+    background: $white;
+    padding: 0px 7px;
+    height: 24px;
+    font-weight: $fw-normal;
+    @include transit();
+    cursor: pointer;
+    input {
+        background: transparent;
+        border: none;
+        height: 24px;
+        padding: 0px;
+    }
+    .icon {
+        position: absolute;
+        top: 5px;
+        opacity: 0.5;
+        line-height: 18px;
+        border-radius: 10px;
+        background-color: $primary;
+        color: white;
+        width: 20px;
+        text-align: center;
+        font-size: 12px;
+        @include transit();
+        &:hover {
+            opacity: 1;
+        }
+    }
+    &.icon-right {
+        .icon {
+            right: 2px;
+            top: 3px;
+        }
+    }
+    &.icon-left {
+        .icon {
+            left: 2px;
+        }
+    }
+}
+
+.form-field {
+    line-height: 25px;
+    &.inline-form-field {
+        label, .input-container {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        label {
+            width: 120px;
+            padding-right: 15px;
+            text-align: right;
+            padding-right: 20px;
+            &.push-right {
+                padding-right: 20px;
+            }
+        }
+    }
+    &.block-form-field {
+        margin-bottom: 5px;
+        &:first-child {
+            margin-bottom: 0;
+        }
+    }
+    label.push-right {
+        padding-right: 20px;
+    }
+    label.market-status-label {
+        width: auto;
+        padding-right: 15px;
+    }
+}
+
+.form-wrapper {
+    border: 1px solid $line-gray;
+    margin-bottom: 5px;
+    // border-radius: 5px;
+    overflow: hidden;
+    background-color: $white;
+    > h4,
+    > .header {
+        margin: 0px;
+        padding: 6px 10px;
+        color: $primary-dark;
+        background-color: #f1f8ff;
+        font-size: 11px;
+        font-weight: $fw-xbold;
+        border-bottom: 1px solid $primary-lighter;
+        text-transform: uppercase;
+    }
+    input[type="text"], select, input[type="textarea"], input[type="number"], input[type="email"] {
+        width: 80%;
+        &.short-input {
+            width: 45px;
+        }
+        &.max-input {
+            width: 100%;
+        }
+    }
+    .field-sublbl {
+        font-size: $font-small;
+        color: $gray;
+        font-style: italic;
+    }
+    .form-inner {
+        padding: 5px;
+        overflow-x: auto;
+        .form-field:not(:last-child) {
+            padding-bottom: 5px;
+            border-bottom: 1px solid $gray-lightest;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+.form-wrapper--no-border {
+  border: none;
+}
+
+.form-group {
+    // overflow: auto;
+    box-sizing: border-box;
+    padding: 5px;
+    &[data-required="true"] {
+        .form-group-label:after {
+            content: '*';
+            color: $red;
+            font-size: $font-xlarge;
+        }
+    }
+    .form-group-label {
+        width: 150px;
+        display: block;
+        font-size: 12px;
+        float: left;
+        margin: 0;
+        line-height: 20px;
+    }
+    .form-group-control {
+        width: calc(100% - 150px);
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+        margin: 0;
+        p {
+            margin: 0;
+        }
+        &.disabled, &[disabled], [disabled] {
+            background-color: $gray-lightest;
+            color: $gray-dark;
+            cursor: not-allowed;
+            input, select {
+                background-color: $gray-lightest;
+                cursor: not-allowed;
+            }
+        }
+        &:not(.disabled) {
+            > input:not([disabled]) {
+                cursor: pointer;
+            }
+            > select:not([disabled]) {
+                cursor: pointer;
+            }
+        }
+        input.line2 {
+            line-height: calc($input-h * 2)
+        }
+
+        input.error {
+            border: 1px solid $color-error;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .form-group-button {
+            position: absolute;
+            top: -1px;
+            right: 0px;
+            box-shadow: none;
+            margin: 0;
+            border: none;
+            border-radius: 0;
+            border-left: 1px solid #e2e2e2;
+        }
+    }
+    .field-err {
+        font-size: $font-small;
+        color: $red;
+        font-style: italic;
+        display: block;
+        position: absolute;
+        top: 7px;
+        right: 14px;
+    }
+    .field-err-inline {
+      font-size: 11px;
+      color: #d01515;
+      font-style: italic;
+      display: block;
+      position: absolute;
+    }
+    &.field-look {
+        border: 1px solid $line-gray;
+        border-radius: 3px;
+        margin: 3px;
+        width: calc(100% - 6px);
+        padding: 0px;
+        height: 30px;
+        &.show-error {
+            min-height: 30px;
+            height: auto;
+            .form-group-control {
+                height: auto;
+            }
+        }
+        label, .form-group-label {
+            text-transform: capitalize;
+            background-color: $primary-lightest;
+            width: 150px;
+            text-overflow: ellipsis;
+            padding: 2px 5px;
+            line-height: 23px;
+        }
+        .form-group-control {
+            width: calc(100% - 150px);
+            padding: 3px 5px;
+            line-height: 22px;
+            // height: 100%;
+            height: 28px;
+            select {
+                width: 100%;
+                margin: 0px;
+            }
+            input {
+                border: 0px;
+                line-height: 25px;
+                background-color: $white;
+                box-sizing: border-box;
+                width: 100%;
+            }
+            &.disabled {
+                input, select {
+                    background-color: $gray-lightest;
+                    cursor: not-allowed;
+                }
+            }
+        }
+    }
+    &.highlight-field {
+        label, .form-group-label {
+            background-color: $secondary-lightest;
+        }
+        .form-group-control {
+            position: relative;
+            padding: 0px;
+            width: calc(100% - 150px);
+            border: 0px;
+        }
+    }
+    &.field-txtarea {
+        height: 80px!important;
+        .form-group-control {
+            height: 70px!important;
+        }
+    }
+    &.field-plain {
+        margin: 3px;
+        width: calc(100% - 20px);
+        padding: 0px;
+        height: 30px;
+        label, .form-group-label {
+            text-transform: capitalize;
+            width: 150px;
+            text-overflow: ellipsis;
+            line-height: 22px;
+        }
+        .form-group-control {
+            width: calc(100% - 172px);
+            line-height: 22px;
+            height: 22px;
+            border: 1px solid $line-gray;
+            border-radius: 3px;
+            input {
+                border: 0px;
+                line-height: 25px;
+                background-color: $white;
+                width: calc(100% - 10px);
+
+                &[disabled] {
+                    background: $gray-lightest;
+                    color: $gray-dark;
+                }
+            }
+            span {
+                padding: 0px 5px;
+            }
+        }
+    }
+    .verify-status {
+        color: $primary;
+        position: absolute;
+        top: 0px;
+        right: 10px;
+        line-height: 24px;
+        &.phx-check {
+            color: $greenery;
+        }
+        &.phx-close {
+            color: $red;
+        }
+    }
+
+    &.form-group-small-label {
+        .form-group-label {
+            width: 100px;
+        }
+        .form-group-control {
+            width: calc(100% - 100px);
+        }
+    }
+}
+
+.form-combine {
+    display: flex;
+    &.form-dob {
+        .form-group:nth-child(2) {
+            .form-group-control {
+                width: 60px;
+            }
+        }
+        .form-group:nth-child(3) {
+            .form-group-control {
+                width: 70px;
+            }
+        }
+    }
+}
+
+.input-field {
+    background: #fff;
+}
+
+.input-group {
+    .input-group-icon,
+    input[type="text"] {
+        vertical-align: middle;
+        display: inline-block;
+    }
+
+    :first-child {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-right: 0;
+    }
+    :last-child {
+        border-left: 0;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
+
+.input-group-icon {
+    background: $white;
+    border-radius: 5px;
+    border: 1px solid $line-gray;
+    color: $line-gray;
+}
+
+.input-group-medium {
+    .input-group-icon,
+    input[type="text"] {
+        height: 30px;
+        line-height: 30px;
+        min-width: 30px;
+    }
+}
+
+/* game event form overrides */
+.game_event_form_field {
+  padding: 0px;
+
+  .form-group-control {
+    width: 100%;
+  }
+}
+
+.game_event_form_field--no_label {
+  .form-group-label {
+    width: 0px;
+  }
+}
+
+.game_event_form_opponents_section {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+
+  .opponentsSelection {
+    flex-grow: 1;
+
+    .form-group-control {
+      width: 100%;
+    }
+  }
+
+  .opponentVersusLabel {
+    flex-grow: 1;
+  }
+
+  .rotationNumberInput {
+    width: 50px !important;
+    flex-grow: 0;
+  }
+
+  .field-err {
+    top: 10px;
+  }
+
+}
+
+select[disabled] {
+    pointer-events: none;
+    background: #eee;
+    color: #333;
+}

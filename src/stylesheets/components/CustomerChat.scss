@@ -1,0 +1,356 @@
+/*Styles applicable to specific tool only that doesnt belong to any modules*/
+
+/*START: CUSTOMER CHAT*/
+
+#app-customer-chat {
+	* {
+		box-sizing: border-box;
+	}
+	.sidebar-container {
+		
+		.queue, .sessions {
+			background: #3d464d;
+		    height: 100%;
+    		overflow-y: hidden;
+			.sidebar-head {
+				text-align: center;
+				background: $primary-dark;
+				color: $white;
+			}
+			.sidebar-body {
+				height: auto;
+				.queue-item {
+					background: $white;
+				    border-color: $gray-light;
+				    padding: 8px 10px;
+				    border-radius: 3px;
+				    color: $primary;
+				    position: relative;
+				    @include transit();
+				    min-height: 45px;
+				    > div {
+			    	    width: calc(100% - 80px);
+			    	    overflow: hidden;
+			    	    > div, > span {
+		    	    	    text-overflow: ellipsis;
+						    overflow: hidden;
+						    white-space: nowrap;
+						    padding-left: 15px;
+			    	    }
+			    	    .seclvl {
+			    	    	position: absolute;
+			    	    	top: 0px;
+			    	    	left: 0px;
+			    	    	width: 20px;
+			    	    	height: 20px;
+			    	    	background: $gray-dark;
+			    	    	text-align: left;
+						    padding: 0px 0px 0px 5px;
+						    line-height: 16px;
+			    	    	color: $white;
+			    	    	font-size: 10px;
+		    	    	    border-bottom-right-radius: 20px;	
+			    	    }
+				    }
+				    &.flash-item {
+				    	animation: flashpop 10s;
+				    	animation-iteration-count: 1;
+				    }
+				    &.ended,
+				    &.queue-item-disabled {
+				    	background: $gray-light;
+				    	color: $gray;
+				    }
+				    &[data-warning="true"] {
+				    	background: $red;
+				    	border-color: #ff6b3a;
+				    }
+				    &.queue-item-disabled.flash-item {
+				    	animation: flashpop-red 10s;
+				    	animation-iteration-count: 1;
+				    }
+				    &:last-child {
+				    	margin-bottom: 50px;
+				    }
+				    button {
+				    	position: absolute;
+			    	    top: 8px;
+    					right: 8px;
+    					&.btn-accept {
+    						background: $green;
+    						box-shadow: 0px 3px #229551;;
+    						color: $white;
+    						.phxico {
+						    	color: $white;
+						    	font-size: 16px;
+						    }
+    					}
+    					&.btn-reject {
+    						background: $red;
+    						box-shadow: 0px 3px #981f1f;
+    						color: $white;
+    						.phxico {
+					    	color: $white;
+					    	font-size: 16px;
+					    	}
+    					}
+    					&[disabled] {
+    						background: $gray-lighter;
+    						box-shadow: 0px 3px $gray;
+    						.phxico {
+    							color: $gray;
+    						}
+    					}
+    					&:hover {
+    						opacity: 0.5;
+    					}
+				    }
+				}
+				.session-item {
+					background: $white;
+					min-height: 24px;
+					padding: 8px;
+					margin-bottom: 5px;
+					border-color: $primary;
+					border-radius: 3px;
+					min-height: 45px;
+					position: relative;
+					> div {
+			    	    width: calc(100% - 80px);
+			    	    overflow: hidden;
+			    	    > div, > span {
+		    	    	    text-overflow: ellipsis;
+						    overflow: hidden;
+						    white-space: nowrap;
+						    padding-left: 15px;
+			    	    }
+			    	    .seclvl {
+			    	    	position: absolute;
+			    	    	top: 0px;
+			    	    	left: 0px;
+			    	    	width: 20px;
+			    	    	height: 20px;
+			    	    	background: $gray-dark;
+			    	    	text-align: left;
+						    padding: 0px 0px 0px 5px;
+						    line-height: 16px;
+			    	    	color: $white;
+			    	    	font-size: 10px;
+		    	    	    border-bottom-right-radius: 20px;	
+			    	    }
+				    }
+					&.selected {
+						background: $primary;
+						border-color: $primary-bright;
+						color: $white;
+					}
+					&.ended {
+				    	background: $gray-light;
+				    	color: $gray;
+				    }
+				    &[data-warning="true"] {
+				    	background: $red;
+				    	border-color: #ff6b3a;
+				    }
+				    &:last-child {
+				    	margin-bottom: 50px;
+				    }
+				    button {
+				    	position: absolute;
+			    	    top: 8px;
+    					right: 8px;
+    					&.btn-accept {
+    						background: $green;
+    						box-shadow: 0px 3px #229551;
+    						color: $white;
+    						.phxico {
+						    	color: $white;
+						    	font-size: 16px;
+						    }
+						    
+    					}
+    					&.btn-reject {
+    						background: $red;
+    						box-shadow: 0px 3px #981f1f;
+    						color: $white;
+    						.phxico {
+						    	color: $white;
+						    	font-size: 16px;
+					    	}
+    					}
+    					&[disabled] {
+    						background: $gray-lighter;
+    						box-shadow: 0px 3px $gray;
+    						.phxico {
+    							color: $gray;
+    						}
+    					}
+    					&:hover {
+					    	opacity: 0.5;
+					    }
+				    }
+				}
+			}
+		}
+		.queue {
+			border-right: 1px solid #6eabe3;
+			.sidebar-body {
+				height: 100%;
+			}
+		}
+		.sessions {
+			.sidebar-body {
+				height: 100%;
+			}
+		}
+	}
+	.page-main {
+		border-color: $gray;
+		.main-head {
+
+		}
+		.main-body {
+			height: calc(100% - 120px);
+    		overflow-y: auto;
+			.customer-info {
+				background: $primary;
+				margin-bottom: 0px;
+				padding: 10px;
+			    overflow: hidden;
+			    position: fixed;
+			    top: 30px;
+			    width: calc(100% - 20px);
+				.info-head {
+					color: white;
+					font-size: 16px;
+					padding: 0px 10px;
+					margin-bottom: 5px;
+					width: calc(100% - 120px);
+					float: left;
+				    overflow: hidden;
+   					text-overflow: ellipsis;
+				}
+				.info-details {
+					color: white;
+					font-size: 12px;
+					padding: 0px 10px;
+					width: calc(100% - 75px);
+					float: left;
+					> div {
+						overflow: hidden;
+   						text-overflow: ellipsis;
+   						white-space: nowrap;
+   						float: left;
+   						margin-right: 5px;
+   						overflow: hidden;
+					    text-overflow: ellipsis;
+					    width: 100%;
+					}
+				}
+				.btn-endchat {
+					width: 50px;
+					float: right;
+				    position: absolute;
+			        right: 10px;
+    				top: 10px;
+    				font-size: 20px;
+				    text-align: center;
+				    padding: 0px;
+				    height: 35px;
+				    &:not([disabled]) {
+				    	&:hover {
+					    	background: $red;
+					    	color: $white;
+				    	    box-shadow: 0px 3px #981f1f;
+					    }
+				    }
+				}
+			}
+			.messages {
+				min-height: 200px;
+				height: auto;
+				margin-bottom: 0px;
+				padding-top: 61px;
+				overflow-x: hidden;
+				.message-wrapper {
+					width: 100%;
+				}
+				.message {
+					padding: 5px 10px;
+				    background: $primary-lighter;
+				    color: $black;
+				    border-radius: 3px;
+				    margin-bottom: 5px;
+				    transition: all 0.3s ease;
+				    animation: popbox 500;
+				    animation-iteration-count: 1;
+				    width: 90%;
+					.message-timestamp, .message-subhead {
+				    	font-size: 10px;
+				    	color: $black50;
+				    	text-transform: uppercase;
+				    	font-weight: bold;
+				    }
+				    .message-subhead {
+				    	display: block;
+				    	margin-bottom: 5px;
+				    }
+				    .message-content {
+				    	display: block;
+			    	    word-break: break-all;
+				    }
+				    &.customer-message {
+				    	background: orange;
+				    }
+				    &.operator-message {
+				    	margin-left: 9%;
+				    }
+				    &.system-message {
+				    	text-align: center;
+				    	background: $green;
+				    	color: $white;
+				    	padding: 10px;
+				    	width: 100%;
+				    	.phxico {
+				    		display: block;
+				    		text-align: center;
+				    		font-size: 26px;
+				    		margin-bottom: 7px;
+				    	}
+				    	.message-timestamp {
+				    		margin-top: 10px;
+				    		color: $white;
+				    	}
+				    }
+				}
+			}
+		}
+		.textarea-wrapper {
+			position: fixed;
+			bottom: 0px;
+			left: 0px;
+			width: 100%;
+			background: $gray-lightest;
+			overflow-y: visible;
+			padding: 10px;
+			.text-field {
+				width: calc(100% - 100px);
+				float: left;
+				border-color: $gray-lighter;
+				padding: 10px;
+			    height: 80px;
+    			resize: none;
+			}
+			.buttons {
+			    width: 70px;
+    			float: right;
+    			padding-right: 10px;
+    			button {
+				    margin: 12px 0px;
+				    height: 55px;
+				    font-size: 20px;
+    			}
+			}
+		}
+	}
+}

@@ -1,0 +1,420 @@
+body {
+    background: $bg;
+    color: $black;
+}
+
+header {
+    background: $primary;
+    color: $white;
+}
+
+.color-foreground {
+    color: $primary-darker;
+}
+
+.brand {
+    h1 {
+        color: $primary-darkest;
+    }
+}
+
+.text-error {
+    color: $color-error;
+}
+
+.text-warning {
+    color: $color-warning;
+}
+
+.text-yellow {
+    color: $yellow;
+}
+
+.text-success {
+    color: $color-success;
+}
+
+nav {
+    li {
+        a {
+            @include transition(background-color .3s);
+            background-color: darken($primary, 5%);
+            border-top-right-radius: $border-radius-base;
+            border-top-left-radius: $border-radius-base;
+            color: $white;
+            &:hover {
+                background-color: darken($primary, 8%);
+            }
+            &.active {
+                background-color: $white;
+                color: darken($primary, 5%);
+            }
+        }
+    }
+}
+
+.user-section {
+    .btn {
+        color: $white;
+        &.btn-settings {
+            border-right-color: darken($primary, 10%);
+        }
+    }
+}
+
+.header-utilities-container {
+    border: 0px solid;
+    .actions {
+        border-right-color: $primary-lighter;
+        a {
+            @include transition(background-color .3s, color .3s);
+            color: darken($primary, 5%);
+            &.disabled {
+                color: $disabled;
+                &:hover {
+                    cursor: text;
+                }
+            }
+            &.enabled:hover {
+                background-color: darken($primary, 5%);
+                color: $white;
+            }
+        }
+    }
+}
+
+.sidebar-container {
+    border-right-color: $primary-lighter;
+}
+
+.page-footer {
+    border-top-color: $primary-lighter;
+}
+
+.virtual-list-container {
+    .back-to-top {
+        background: $primary-lighter;
+        color: $white;
+        box-shadow: 0 0 2px;
+    }
+    .row {
+        &.settled {
+            .column {
+                background-color: $color-settled;
+            }
+            &.market-summary-row {
+                .column {
+                    background-color: darken($color-settled, 8%);
+                }
+            }
+        }
+        &.open {
+            .column {
+                background-color: $color-open;
+            }
+            &.market-summary-row {
+                .column {
+                    background-color: darken($color-open, 8%);
+                }
+            }
+        }
+        &.closed {
+            .column {
+                background-color: $color-closed;
+            }
+            &.market-summary-row {
+                .column {
+                    background-color: darken($color-closed, 8%);
+                }
+            }
+        }
+        &.resulted {
+            .column {
+                background-color: $color-resulted;
+            }
+            &.market-summary-row {
+                .column {
+                    background-color: darken($color-resulted, 8%);
+                }
+            }
+        }
+        &.suspended {
+            .column {
+                background-color: $color-suspended;
+            }
+            &.market-summary-row {
+                .column {
+                    background-color: darken($color-suspended, 8%);
+                }
+            }
+        }
+        .column {
+            &.editable {
+                .column-data {
+                    padding: 0 3px;
+                    background: rgba(255, 255, 255, 0.55);
+                    box-shadow: inset 0 0 1px rgba(0,0,0,0.7);
+                }
+            }
+            &.unsaved {
+                border-color: black;
+                background-color: #ddd;
+                .column-data {
+                    background: transparent;
+                }
+            }
+        }
+    }
+}
+
+.status-lbl-icon {
+    &[data-status="Open"] {
+        color: darken($color-open, 25%);
+        &:before {
+            background: darken($color-open, 25%);
+        }
+    }
+    &[data-status="Closed"] {
+        color: darken($color-closed, 25%);
+        &:before {
+            background: darken($color-closed, 25%);
+        }
+    }
+    &[data-status="Settled"] {
+        color: darken($color-settled, 25%);
+        &:before {
+            background: darken($color-settled, 25%);
+        }
+    }
+    &[data-status="Resulted"] {
+        color: darken($color-resulted, 25%);
+        &:before {
+            background: darken($color-resulted, 25%);
+        }
+    }
+    &[data-status="Suspended"] {
+        color: darken($color-suspended, 25%);
+        &:before {
+            background: darken($color-suspended, 25%);
+        }
+    }
+}
+
+.sports-color-BASK{
+    background-color: $BASK;
+}
+.sports-color-TENN {
+    background-color: $TENN;
+}
+.sports-color-FOOT {
+    background-color: $FOOT;
+}
+.sports-color-GREY {
+    background-color: $GREY;
+}
+.sports-color-AMFB {
+    background-color: $AMFB;
+}
+.sports-color-AURL {
+    background-color: $AURL;
+}
+.sports-color-BADM {
+    background-color: $BADM;
+}
+.sports-color-BASE {
+    background-color: $BASE;
+}
+.sports-color-BEVO {
+    background-color: $BEVO;
+}
+.sports-color-BOXI {
+    background-color: $BOXI;
+}
+.sports-color-CRIC {
+    background-color: $CRIC;
+}
+.sports-color-CYCL {
+    background-color: $CYCL;
+}
+.sports-color-FIEL {
+    background-color: $FIEL;
+}
+.sports-color-DART {
+    background-color: $DART;
+}
+.sports-color-HAND {
+    background-color: $HAND;
+}
+.sports-color-ICEH {
+    background-color: $ICEH;
+}
+.sports-color-MOSP {
+    background-color: $MOSP;
+}
+.sports-color-RUGU {
+    background-color: $RUGU;
+}
+.sports-color-SNOO {
+    background-color: $SNOO;
+}
+.sports-color-VOLL {
+    background-color: $VOLL;
+}
+.sports-color-WATE {
+    background-color: $WATE;
+}
+.sports-color-WINT {
+    background-color: $WINT;
+}
+.sports-color-GOLF {
+    background-color: $GOLF;
+}
+.sports-color-FLOO {
+    background-color: $FLOO;
+}
+.sports-color-FUTS {
+    background-color: $FUTS;
+}
+.sports-color-TABL {
+    background-color: $TABL;
+}
+.sports-color-HORS {
+    background-color: $HORS;
+}
+.sports-color-OLYM {
+    background-color: $OLYM;
+}
+.sports-color-BOWL {
+    background-color: $BOWL;
+}
+.sports-color-BEAC {
+    background-color: $BEAC;
+}
+.sports-color-RALL {
+    background-color: $RALL;
+}
+.sports-color-CHES {
+    background-color: $CHES;
+}
+.sports-color-GAEL {
+    background-color: $GAEL;
+}
+.sports-color-BAND {
+    background-color: $BAND;
+}
+.sports-color-NINE {
+    background-color: $NINE;
+}
+.sports-color-SWIM {
+    background-color: $SWIM;
+}
+
+$ico-nocode: (
+    ('olym',    '@'),
+    ('foot',    'A'),
+    ('futs',    'A'),
+    ('bask',    'B'),
+    ('base',    'C'),
+    ('amfb',    'D'),
+    ('aurl',    'E'),
+    ('badm',    'F'),
+    ('bevo',    'G'),
+    ('boxi',    'H'),
+    ('cric',    'I'),
+    ('cycl',    'J'),
+    ('dart',    'K'),
+    ('fiel',    'L'),
+    ('golf',    'M'),
+    ('grey',    'N'),
+    ('hand',    'O'),
+    ('hors',    'P'),
+    ('iceh',    'Q'),
+    ('mosp',    'R'),
+    ('rugu',    'S'),
+    ('snoo',    'T'),
+    ('tenn',    'U'),
+    ('voll',    'V'),
+    ('wate',    'W'),
+    ('wint',    'X'),
+    ('floo',    'Y'),
+    ('tabl',    'a'),
+);
+
+.icon-nocode {
+    .ico {
+        color: $white;
+        border-radius: 12px;
+        @include sq(15px); 
+        background: $gray;
+        margin-right: 5px;
+        text-align: center;
+        line-height: 15px;
+        font-size: 10px;
+    }
+}
+
+@each $code, $content in $ico-nocode {
+    $CODE:to-upper-case(#{$code});
+    .icon-nocode > .ico[data-sportspath=#{$CODE}],
+    {
+        &:before {
+            content: $content;
+        }
+        @extend .sports-color-#{$CODE};
+    }
+}
+
+//icons that doesnt belong to fontawesome and fontsports, basically PNG icons made for specific purpose but can be reusable
+.icon-custom {
+    @include sq(20px);
+    background-size: cover;
+    &.icon-barsdots {
+        //128 x 128
+        background-image: url(../assets/icons/bars-dots.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 70%;
+    }
+    &.icon-open {
+        background-image: url(../assets/icons/open.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: inline-block;
+    }
+    &.icon-suspended {
+        background-image: url(../assets/icons/suspended.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: inline-block;
+    }
+    &.icon-closed {
+        background-image: url(../assets/icons/closed.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: inline-block;
+    }
+    &.icon-resulted {
+        background-image: url(../assets/icons/resulted.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: inline-block;
+    }
+    &.icon-settled {
+        background-image: url(../assets/icons/settled.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: inline-block;
+    }
+    
+    &.icon-hover {
+        opacity: 0.25;
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

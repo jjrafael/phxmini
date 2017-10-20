@@ -1,0 +1,23 @@
+.importOpponentDlgTextContent {
+  padding: 40px 20px 40px 20px;
+  text-align: center;
+}
+
+.importOpponentDlg {
+  height: 270px;
+  overflow: auto;
+  padding: 5px;
+}
+
+.importOpponentDlgBottomBar {
+  height: 30px;
+  line-height: 30px;
+  padding: 0px 5px 5px 5px;
+  margin: 0px 5px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+
+  .importButton {
+    float: right;
+    margin: 5px 0px;
+  }
+}
